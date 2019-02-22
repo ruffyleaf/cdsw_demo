@@ -2,16 +2,18 @@
 
 # Imports the pandas package as "pd"
 import pandas as pd
-
+from datetime import datetime
 # run the following HDFS command to bring in the data from HDFS
 # into the Workbench Session
 # This brings data from hadoop into your local /tmp folder.
 # Once you close the session, the datafile will be deleted from /tmp
 !hdfs dfs -get /data/casemix/casemix.csv /tmp
 
+start=datetime.now()
 # read in the file from tmp and create the pandas dataframe
 file_path = "/tmp/casemix.csv"
 
 df = pd.read_csv(file_path)
 
 df.head()
+print (datetime.now()-start)

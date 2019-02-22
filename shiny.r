@@ -11,3 +11,5 @@ service.url <- paste("http://", Sys.getenv("CDSW_ENGINE_ID"), ".",
 Sys.getenv("CDSW_DOMAIN"), sep="") 
 Sys.sleep(5)
 iframe(src=service.url, width="640px", height="480px")
+
+service.url
