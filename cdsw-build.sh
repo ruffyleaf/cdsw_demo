@@ -1,14 +1,7 @@
-pip3 install sklearn
-pip2 install sklearn
+# Comment out accordingly
 
-# Insert the install.packages for the R libraries:
-# install.packages(package_name)
-# Libs: plyr, doParallel, shiny, sparklyr, cdsw, shiny, parallel
+# Install python packages
+pip3 install -r requirements.txt
 
-install.packages("plyr")
-install.packages("doParallel")
-install.packages("shiny")
-install.packages("sparklyr")
-install.packages("cdsw")
-install.packages("shiny")
-install.packages("parallel")
+# Install R packages
+Rscript install.R
